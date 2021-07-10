@@ -10,7 +10,7 @@ class colors:
     GreenText = '\033[32m'
     YellowText = '\033[33m'
     BlueText = '\033[34m'
-    MagentaText = '\033b[35m'
+    MagentaText = '\033[35m'
     CyanText = '\033[36m'
     WhiteText = '\033[37m'
 

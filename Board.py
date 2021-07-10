@@ -8,16 +8,35 @@ class Board:
         for i in range(self.width): # Creating a 2d array using length and width
             row = []
             for ii in range(self.length):
-                row.append(0)
+                row.append(8)
             list.append(row)
         self.board = list
 
-    def print_array(self):
-        self.board[0][2] = 1 # Testing for different colors
+    def set_background_color(self, color = 8):
         for i in range(self.width):
             for ii in range(self.length):
-                if self.board[i][ii] == 1: # If we find the one it will print Red box
-                    print(colors.RedText, colors.Background_Red, self.board[i][ii], colors.Reset, end="")
-                else: # Green is default color
-                    print(colors.GreenText, colors.Background_Green, self.board[i][ii], colors.Reset, end="")
-            print("")
+                self.board[i][ii] = color
+
+    def insert_new_color(self, x_cord, y_cord, color):
+        self.board[y_cord][x_cord] = color
+
+    def print_array(self):
+        for i in range(self.width):
+            for ii in range(self.length):
+                if self.board[i][ii] == 1: # Red(number 1)
+                    print(colors.RedText, colors.Background_Red, self.board[i][ii], end="")
+                elif self.board[i][ii] == 2: # Green(number 2)
+                    print(colors.GreenText, colors.Background_Green, self.board[i][ii], end="")
+                elif self.board[i][ii] == 3: # Yellow(number 3)
+                    print(colors.YellowText, colors.Background_Yellow, self.board[i][ii], end="")
+                elif self.board[i][ii] == 4: # Blue(number 4)
+                    print(colors.BlueText, colors.Background_Blue, self.board[i][ii], end="")
+                elif self.board[i][ii] == 5: # Cyan(number 5)
+                    print(colors.CyanText, colors.Background_Cyan, self.board[i][ii], end="")
+                elif self.board[i][ii] == 6: # Magenta(number 6)
+                    print(colors.MagentaText, colors.Background_Magenta, self.board[i][ii], end="")
+                elif self.board[i][ii] == 7: # White(number 7)
+                    print(colors.YellowText, colors.Background_White, self.board[i][ii], end="")
+                elif self.board[i][ii] == 8: # Black(number 8)
+                    print(colors.BlackText, colors.Background_Black, self.board[i][ii], end="")
+            print(colors.Reset)
