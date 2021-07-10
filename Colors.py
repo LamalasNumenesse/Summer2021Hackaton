@@ -1,22 +1,26 @@
+import os
+if os.name == 'nt':
+    os.system('color')
+
+
 class colors:
-    #Color Class to make it easier to color the text and background
-    BlackText = '\u001b[30m'
-    RedText = '\u001b[31m'
-    GreenText = '\u001b[32m'
-    YellowText = '\u001b[33m'
-    BlueText = '\u001b[34m'
-    MagentaText = '\u001b[35m'
-    CyanText = '\u001b[36m'
-    WhiteText = '\u001b[37m'
+    # Color Class to make it easier to color the text and background
+    BlackText = '\033[30m'
+    RedText = '\033[31m'
+    GreenText = '\033[32m'
+    YellowText = '\033[33m'
+    BlueText = '\033[34m'
+    MagentaText = '\033b[35m'
+    CyanText = '\033[36m'
+    WhiteText = '\033[37m'
 
-    Reset= '\u001b[0m' # Sets the colors back to default
+    Reset = '\033[0m'  # Sets the colors back to default
 
-    Background_Black = '\u001b[40m'
-    Background_Red = '\u001b[41m'
-    Background_Green = '\u001b[42m'
-    Background_Yellow = '\u001b[43m'
-    Background_Blue = '\u001b[44m'
-    Background_Magenta = '\u001b[45m'
-    Background_Cyan = '\u001b[46m'
-    Background_White = '\u001b[47m'
-
+    Background_Black = '\033[40m'
+    Background_Red = '\033[41m'
+    Background_Green = '\033[42m'
+    Background_Yellow = '\033[43m'
+    Background_Blue = '\033[44m'
+    Background_Magenta = '\033[45m'
+    Background_Cyan = '\033[46m'
+    Background_White = '\033[47m'
