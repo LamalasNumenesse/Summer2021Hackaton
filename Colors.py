@@ -1,4 +1,5 @@
 class colors:
+    #Color Class to make it easier to color the text and background
     BlackText = '\u001b[30m'
     RedText = '\u001b[31m'
     GreenText = '\u001b[32m'
@@ -8,7 +9,7 @@ class colors:
     CyanText = '\u001b[36m'
     WhiteText = '\u001b[37m'
 
-    Reset= '\u001b[0m'
+    Reset= '\u001b[0m' # Sets the colors back to default
 
     Background_Black = '\u001b[40m'
     Background_Red = '\u001b[41m'
